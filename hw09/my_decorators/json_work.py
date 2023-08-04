@@ -9,6 +9,8 @@ def to_json(path):
             if type(result) is dict:
                 # преобразование значений в строку т.к. комплексные числа не сериализуются в json
                 result = {key: str(value) for key, value in result.items()}
+            else:
+                result = {' '.join(map(str, args)): str(result)}
 
             with open(f'{path}.json', 'w+', encoding='utf-8') as file:
                 # если json файл пустой, создаем пустой список
