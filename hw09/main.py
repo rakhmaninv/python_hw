@@ -48,8 +48,7 @@ if __name__ == '__main__':
     try:
         generate_values(-10, 10)
         quadratic_equation()
-        # tt = {key: str(value) for key, value in tt.items}
-        # print(tt)
+
 
     except ValueError as e:
         print(e)

@@ -14,19 +14,6 @@ def to_csv(path):
     return decorator
 
 
-# def from_csv(path):
-#     def decorator(func):
-#         def wrapper():
-#             with open(f'{path}.csv', 'r', newline='', encoding='utf-8') as file:
-#                 values = csv.reader(file, quoting=csv.QUOTE_NONNUMERIC)
-#                 for row in values:
-#                     func(*row)
-#             # return func
-#
-#         return wrapper
-#
-#     return decorator
-
 def from_csv(path):
     def decorator(func):
         result_dict = {}
